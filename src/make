@@ -1,0 +1,10 @@
+#Al berro
+
+CC=g++
+
+clean:
+   rm ./src/inputs*
+
+build:
+   CC ./src/main.cpp && clean
+
