@@ -28,11 +28,8 @@ int main(){
 
     //End of game set functionality
 
-     //std::string path2file = "/home/victor/Projects/HskellOwn/LongWords.hs";
-     //std::string tmpdir = "/home/victor/tmp/";
-
-     std::string path2file = "/home/victor/Projects/Checker/test.lisp";
-     std::string tmpdir = "/home/victor/tmp/";
+     std::string path2file = "~/Projects/Checker/test.lisp";
+     std::string tmpdir = "~/tmp/";
 
      Judge* jdg = new Judge ();
 
