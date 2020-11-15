@@ -9,6 +9,7 @@
 
 #include "gameSet.h"
 #include "judge.h"
+#include "compiler.h"
 
 int main(){
 
@@ -20,26 +21,18 @@ int main(){
     names += {"tizadurapuerca", "t12a"};
     names += {"lol", "lol"};
 
-    for(auto tupl: names) {
-        std::cout << "Possible input for problem x: " << names.pinput (tupl) << std::endl;
-        std::cout << "Correct output for problem x: " << names.coutput (tupl) << std::endl;
-        std::cout << endl;
-    }
-
     //End of game set functionality
 
-     //std::string path2file = "/home/victor/Projects/HskellOwn/LongWords.hs";
-     //std::string tmpdir = "/home/victor/tmp/";
-
-     std::string path2file = "/home/victor/Projects/Checker/test.lisp";
+     std::string path2file = "/home/victor/Projects/HskellOwn/LongWords.hs";
      std::string tmpdir = "/home/victor/tmp/";
 
-     Judge* jdg = new Judge ();
+     //std::string path2file = "/home/victor/Projects/Checker/test.lisp";
+     //std::string tmpdir = "/home/victor/tmp/";
 
-     cout << jdg->compile(path2file, tmpdir) << endl;
-     if (jdg->judge(tmpdir+"LongWords", names))
-         std::cout << "You passed the test" << std::endl;
-     else std::cout << "U piece of shit, unsat retarded clown do not deserve to live" << endl;
+     judge* jdg = new judge();
+
+     jdg->jdge (path2file, tmpdir, names);
+
 
     return 0;
 }

@@ -4,5 +4,5 @@ clean :
 	rm ./src/inputs* *.o ./inputs*
 
 build :
-	g++ -o main.o ./src/main.cc
+	g++ -std=gnu++17 -o main.o ./src/main.cc
 
